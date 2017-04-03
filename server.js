@@ -26,7 +26,7 @@ var requestHandler = function (req, res) {
       if (settings.auth) {
         var credentials = auth(req);
 
-        if (!credentials || credentials.name !== settings.auth.username || credentials.pass !== settings.auth.password) {
+        if (!credentials || credentials.name !== process.env.AUTH_USERNAME || credentials.pass !== process.env.AUTH_PASSWORD) {
           res.statusCode = 401;
           res.setHeader('WWW-Authenticate', 'Basic realm="Access Denied"');
           res.end('Access denied');
