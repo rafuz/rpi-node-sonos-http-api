@@ -21,7 +21,8 @@ var settings = {
   webroot: path.resolve(__dirname, 'static'),
   presetDir: path.resolve(__dirname, 'presets'),
   announceVolume: 40,
-  auth: true
+  auth: true,
+  aws: true
 };
 
 // load user settings
