@@ -22,7 +22,7 @@ var settings = {
   presetDir: path.resolve(__dirname, 'presets'),
   announceVolume: 40,
   auth: true,
-  aws: true
+  aws: process.env.AWS || null
 };
 
 // load user settings
