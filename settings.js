@@ -15,13 +15,13 @@ function merge(target, source) {
 }
 
 var settings = {
-  port: 80,
+  port: process.env.PORT || 80,
   securePort: 443,
   cacheDir: path.resolve(__dirname, 'cache'),
   webroot: path.resolve(__dirname, 'static'),
   presetDir: path.resolve(__dirname, 'presets'),
-  announceVolume: 40,
-  auth: true,
+  announceVolume: process.env.ANNOUNCE_VOLUME || 60,
+  auth: process.env.AUTH || false,
   aws: process.env.AWS || null
 };
 
